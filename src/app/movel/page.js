@@ -2,8 +2,8 @@
 
 
 import "../../app/globals.css"
-import Sidebar from "../../components/sidebar/sidebarComponent"
-import CardComponent from "../../components/card/cardComponent"
+import Sidebar from "../../components/sidebar/sidebarComponent.jsx"
+import CardComponent from "../../components/card/cardComponent.jsx"
 
 const MobilePage = () => {
     return(
