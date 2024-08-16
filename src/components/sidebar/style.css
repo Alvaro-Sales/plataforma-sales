@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Azul: #0080ff;
+    --white: #ffffff;
+    --bg-body: #454545;
+    --black-mod: #222222;
+}
+
+aside {
+    margin-right: 20px;
+}
+
+.navigation {
+    transition: var(--transition);
+}
+
+.navigation .list .itemList.active {
+    background: var(--Azul);
+}
+
+.navigation .list .itemList .link:hover {
+    transition: var(--transition);
+}
