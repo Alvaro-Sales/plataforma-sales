@@ -3,7 +3,7 @@
 
 import "../../app/globals.css"
 import Sidebar from "../../components/sidebar/sidebarComponent"
-import Card from "../../components/card/cardComponent"
+import CardComponent from "../../components/card/cardComponent"
 
 const MobilePage = () => {
     return(
@@ -24,7 +24,7 @@ const MobilePage = () => {
 
                         <div className="w-full h-full grid gridAutoAjuste gap-5 justify-center content-center">
                             {/* --------------- Card 1 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Controle 20GB"
                                 extraPlay="Bônus: 3GB Extra Play"
                                 franquia="Franquia total: 23GB"
@@ -37,7 +37,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 2 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Controle 15GB"
                                 extraPlay="Bônus: 5GB + 8GB Extra Play"
                                 franquia="Franquia total: 28GB"
@@ -49,7 +49,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 3 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Controle 20GB"
                                 extraPlay="Bônus: 5GB + 10GB Extra Play"
                                 franquia="Franquia total: 35GB"
@@ -61,7 +61,7 @@ const MobilePage = () => {
                             />
                             
                             {/* --------------- Card 4 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Controle 20GB Gaming (TWITCH TV)"
                                 extraPlay="Bônus: 5GB + 10GB Extra Play"
                                 franquia="Franquia total: 35GB"
@@ -73,7 +73,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 5 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Pós pago 25GB + 25GB"
                                 incluso="Incluso: Passaporte Américas (titular)."
                                 franquia="Franquia total: 50GB"
@@ -87,7 +87,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 6 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Pós pago 50GB + 50GB"
                                 incluso="Incluso: Passaporte Américas (titular e dependente)."
                                 franquia="Franquia total: 100GB"
@@ -101,7 +101,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 7 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Pós pago 50GB + 50GB"
                                 incluso="Incluso: Passaporte Américas (titular e dependente)."
                                 franquia="Franquia total: 100GB"
@@ -115,7 +115,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 8 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Pós pago 100GB + 100GB"
                                 incluso="Incluso: Passaporte Américas (titular e dependente)."
                                 franquia="Franquia total: 200GB"
@@ -129,7 +129,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 9 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Pós pago 150GB + 150GB"
                                 incluso="Incluso: Passaporte Américas e Europa (titular e dependente)."
                                 franquia="Franquia total: 300GB"
@@ -143,7 +143,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 10 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Pós pago 150GB + 150GB"
                                 incluso="Incluso: Passaporte Américas e Europa (titular e dependente)."
                                 franquia="Franquia total: 300GB"
@@ -157,7 +157,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 11 ---------------- */}
-                            <Card 
+                            <CardComponent 
                                 nomePlano="Pós pago 300GB + 300GB"
                                 incluso="Incluso: Passaporte Mundo (titular e dependente)."
                                 franquia="Franquia total: 600GB"

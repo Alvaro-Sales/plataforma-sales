@@ -3,7 +3,7 @@
 import "./globals.css";
 // import Image from "next/image";
 import "../components/slider/script"
-import Card from "../components/card/cardComponent"
+import CardComponent from "../components/card/cardComponent"
 import SearchForm from "../components/search/searchComponent"
 import Slide from "../components/slider/slideComponent"
 import Sidebar from "../components/sidebar/sidebarComponent"
@@ -29,7 +29,7 @@ export default function Home(){
 
           <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8">
             {/* --------------- Card 1 ---------------- */}
-            <Card 
+            <CardComponent 
                 nomePlano="Controle 20GB"
                 extraPlay="Bônus: 3GB Extra Play"
                 franquia="Franquia total: 23GB"
@@ -42,7 +42,7 @@ export default function Home(){
             />
 
             {/* --------------- Card 2 ---------------- */}
-            <Card 
+            <CardComponent 
                 nomePlano="Controle 15GB"
                 extraPlay="Bônus: 5GB + 8GB Extra Play"
                 franquia="Franquia total: 28GB"
@@ -54,7 +54,7 @@ export default function Home(){
             />
 
             {/* --------------- Card 3 ---------------- */}
-            <Card 
+            <CardComponent 
                 nomePlano="Controle 20GB"
                 extraPlay="Bônus: 5GB + 10GB Extra Play"
                 franquia="Franquia total: 35GB"
