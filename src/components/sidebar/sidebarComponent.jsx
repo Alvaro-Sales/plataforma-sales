@@ -1,6 +1,6 @@
 'use client'
 
-import "/dev-lab/appExperience/plataformas2s/src/app/globals.css"
+
 import Link from 'next/link'
 import "./style.css"
 import { useEffect } from "react"
