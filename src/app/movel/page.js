@@ -78,7 +78,7 @@ const MobilePage = () => {
                                 incluso="Incluso: Passaporte Américas (titular)."
                                 franquia="Franquia total: 50GB"
                                 dcc="DCC: R$ 59,90"
-                                boleto="Boleto: R$ 64,90"
+                                boleto="Boleto: R$ 69,90"
                                 netSales="Net Sales: POS 25GB S/AP PAD"
                                 dependentePago="Dependente pago: Até 1"
                                 dependenteGratis="Dependente Gratuito: 0"
