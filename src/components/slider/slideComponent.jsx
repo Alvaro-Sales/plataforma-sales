@@ -25,7 +25,7 @@ export default function Slide() {
 						/>
 					</div>
 
-					<div className="w-[25%] h-[400px] relative text-center bg-blue-500">
+					<div className="w-[25%] h-[400px] relative text-center">
 						<Image 
 							src="/images/paisagem-2.jpg"
 							width={1900}
@@ -35,7 +35,7 @@ export default function Slide() {
 						/>
 					</div>
 
-					<div className="w-[25%] h-[400px] relative text-center bg-green-500">
+					<div className="w-[25%] h-[400px] relative text-center">
 						<Image 
 							src="/images/paisagem-3.jpg"
 							width={1900}
