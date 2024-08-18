@@ -1,20 +1,19 @@
 "use client"
-
-
 import "../../app/globals.css"
-import Sidebar from "../../components/sidebar/sidebarComponent.jsx"
-import CardComponent from "../../components/card/cardComponent.jsx"
+import Sidebar from "../../components/sidebar/sidebarComponent"
+import CardMobile from "../../components/cards/CardMobile/cardMobile"
+
 
 const MobilePage = () => {
     return(
         <>
-            <div className="w-full max-w-[100vw] flex justify-between">
+            <div className="w-full max-w-[2000px] flex justify-between">
 
                 <aside className="fixed m-0 z-50">
                     <Sidebar />
                 </aside>
 
-                <main className="max-w-[100vw] w-full h-auto flex flex-col overflow-x-hidden p-5 pl-[100px]">
+                <main className="w-full h-auto flex flex-col items-center justify-center pt-10 pl-[75px] pr-5">
 
                     <section className="w-full h-full grid auto-cols-auto auto-rows-auto place-items-center gap-5">
 
@@ -24,7 +23,8 @@ const MobilePage = () => {
 
                         <div className="w-full h-full grid gridAutoAjuste gap-5 justify-center content-center">
                             {/* --------------- Card 1 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
+                                categoria="Exclusivo"
                                 nomePlano="Controle 20GB"
                                 extraPlay="Bônus: 3GB Extra Play"
                                 franquia="Franquia total: 23GB"
@@ -37,7 +37,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 2 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
                                 nomePlano="Controle 15GB"
                                 extraPlay="Bônus: 5GB + 8GB Extra Play"
                                 franquia="Franquia total: 28GB"
@@ -49,7 +49,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 3 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
                                 nomePlano="Controle 20GB"
                                 extraPlay="Bônus: 5GB + 10GB Extra Play"
                                 franquia="Franquia total: 35GB"
@@ -61,7 +61,7 @@ const MobilePage = () => {
                             />
                             
                             {/* --------------- Card 4 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
                                 nomePlano="Controle 20GB Gaming (TWITCH TV)"
                                 extraPlay="Bônus: 5GB + 10GB Extra Play"
                                 franquia="Franquia total: 35GB"
@@ -73,7 +73,8 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 5 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
+                                categoria="Portabilidade"
                                 nomePlano="Pós pago 25GB + 25GB"
                                 incluso="Incluso: Passaporte Américas (titular)."
                                 franquia="Franquia total: 50GB"
@@ -87,7 +88,8 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 6 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
+                                categoria="Portabilidade"
                                 nomePlano="Pós pago 50GB + 50GB"
                                 incluso="Incluso: Passaporte Américas (titular e dependente)."
                                 franquia="Franquia total: 100GB"
@@ -101,7 +103,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 7 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
                                 nomePlano="Pós pago 50GB + 50GB"
                                 incluso="Incluso: Passaporte Américas (titular e dependente)."
                                 franquia="Franquia total: 100GB"
@@ -115,7 +117,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 8 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
                                 nomePlano="Pós pago 100GB + 100GB"
                                 incluso="Incluso: Passaporte Américas (titular e dependente)."
                                 franquia="Franquia total: 200GB"
@@ -129,7 +131,8 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 9 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
+                                categoria="Portabilidade"
                                 nomePlano="Pós pago 150GB + 150GB"
                                 incluso="Incluso: Passaporte Américas e Europa (titular e dependente)."
                                 franquia="Franquia total: 300GB"
@@ -143,7 +146,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 10 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
                                 nomePlano="Pós pago 150GB + 150GB"
                                 incluso="Incluso: Passaporte Américas e Europa (titular e dependente)."
                                 franquia="Franquia total: 300GB"
@@ -157,7 +160,7 @@ const MobilePage = () => {
                             />
 
                             {/* --------------- Card 11 ---------------- */}
-                            <CardComponent 
+                            <CardMobile 
                                 nomePlano="Pós pago 300GB + 300GB"
                                 incluso="Incluso: Passaporte Mundo (titular e dependente)."
                                 franquia="Franquia total: 600GB"

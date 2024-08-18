@@ -2,8 +2,9 @@
 
 import "./globals.css";
 // import Image from "next/image";
-import "../components/slider/script"
-import CardComponent from "../components/card/cardComponent"
+// import "../components/slider/script"
+import CardMobile from "../components/cards/CardMobile/cardMobile"
+import CardTv from "../components/cards/CardTv/cardTv"
 import SearchForm from "../components/search/searchComponent"
 import Slide from "../components/slider/slideComponent"
 import Sidebar from "../components/sidebar/sidebarComponent"
@@ -11,13 +12,13 @@ import Sidebar from "../components/sidebar/sidebarComponent"
 export default function Home(){
   return (
     <>
-      <div className="w-full max-w-[100vw] flex justify-between">
+      <div className="w-full max-w-[2000px] flex justify-between">
 
         <aside className="fixed m-0 z-50">
           <Sidebar />
         </aside>
 
-        <main className="max-w-full h-auto flex flex-col overflow-x-hidden p-5 pl-[90px]">
+        <main className="max-w-full h-auto flex flex-col p-5 pl-[90px]">
 
           <section className="z-10 my-0 mx-auto max-w-full h-auto !p-0 overflow-hidden">
             <Slide />
@@ -27,9 +28,10 @@ export default function Home(){
             <SearchForm />
           </section>
 
-          <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8">
+          <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6">
             {/* --------------- Card 1 ---------------- */}
-            <CardComponent 
+            <CardMobile 
+                categoria="Exclusivo"
                 nomePlano="Controle 20GB"
                 extraPlay="Bônus: 3GB Extra Play"
                 franquia="Franquia total: 23GB"
@@ -42,7 +44,7 @@ export default function Home(){
             />
 
             {/* --------------- Card 2 ---------------- */}
-            <CardComponent 
+            <CardMobile 
                 nomePlano="Controle 15GB"
                 extraPlay="Bônus: 5GB + 8GB Extra Play"
                 franquia="Franquia total: 28GB"
@@ -54,7 +56,7 @@ export default function Home(){
             />
 
             {/* --------------- Card 3 ---------------- */}
-            <CardComponent 
+            <CardMobile 
                 nomePlano="Controle 20GB"
                 extraPlay="Bônus: 5GB + 10GB Extra Play"
                 franquia="Franquia total: 35GB"

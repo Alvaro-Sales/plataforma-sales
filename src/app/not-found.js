@@ -22,16 +22,16 @@ export default function notFound(){
                     <div className="grid grid-cols-1 place-items-center">
 
                         <div className="mb-10 w-full grid place-items-center text-center">
-                            <h1 className="text-white text-6xl mb-2">
+                            <h1 className="text-[var(--text)] text-6xl mb-2">
                                 Erro 404
                             </h1>
 
-                            <h2 className="text-white text-3xl tracking-wider mb-2">
+                            <h2 className="text-[var(--text)] text-3xl tracking-wider mb-2">
                                 Ops.. Página não encontrada. Parece que você andou vasculhando demais...
                             </h2>
                         </div>
 
-                        <button className="text-white bg-transparent px-5 py-2 rounded-3xl outline-none w-[200px] h-[40px] border-solid border-white border hover:bg-[#0080ffbb] hover:border-[#0080ffbb] duration-300">
+                        <button className="text-[var(--text)] bg-transparent px-5 py-2 rounded-3xl outline-none w-[200px] h-[40px] border-solid border-[var(--text)] border hover:bg-[var(--Azul)] hover:border-[var(--Azul)] duration-300">
 
                             <Link href="/" className="tracking-wider text-center">
                                 Voltar para o início

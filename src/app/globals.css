@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 @layer utilities {
     .gridAutoAjuste {
-        grid-template-columns: repeat(auto-fit, 500px);
-        grid-template-rows: repeat(2, 700px);
+        grid-template-columns: repeat(auto-fit, 450px);
+        grid-template-rows: repeat(auto-fit, 650px);
     }
 }
 
@@ -16,14 +19,102 @@
 }
 
 :root {
-    --Azul: #0080ff;
-    --white: #ffffff;
+    --text: #F2F2F2;
+    --green: #09A603;
     --bg-body: #454545;
     --black-mod: #222222;
+    --greenYellow: #CBF23D;
     --transition: all 0.5s ease;
 }
 
 body {
     background: var(--bg-body);
+}
+
+/* Style do Sidebar */
+aside {
+    margin-right: 20px;
+}
+
+.navigation {
+    transition: var(--transition);
+}
+
+.logo {
+    cursor: default;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Marck Script', cursive;
+}
+
+.navigation .list .itemList.active {
+    background: var(--green);
+}
+
+.navigation .list .itemList .link:hover {
+    transition: var(--transition);
+}
+
+/* Style do Slider */
+#radio1:checked ~ .defaultSlide {
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .defaultSlide {
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .defaultSlide {
+    margin-left: -50%;
+}
+
+.navManual {
+    margin-left: calc(50% - 95px);
+}
+
+.navManual .manualBtn, .navAuto div {
+    transition: var(--transition);
+    border: 1px solid var(--green);
+}
+
+.navManual .manualBtn:not(:last-child), .navAuto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+#radio1:checked ~ .navAuto .autoBtn1, #radio2:checked ~ .navAuto .autoBtn2,
+#radio3:checked ~ .navAuto .autoBtn3 {
+    background: var(--green);
+}
+
+/* Style do container de cards */
+.containerCard:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Style do Search */
+.input {
+    margin-inline: min(2em,calc(1.2em + 0.9rem));
+}
+
+.input:focus ~ .fancy-bg {
+    border: 1px solid var(--green);
+    background: transparent;
+}
+
+.input:focus ~ .search {
+    fill: var(--green);
+}
+
+.input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
 }
 

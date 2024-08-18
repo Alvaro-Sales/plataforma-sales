@@ -1,12 +1,10 @@
 import { Inter } from "next/font/google";
-import "../components/card/cardComponent";
-import "../components/sidebar/sidebarComponent";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Plataforma S2S Experience",
+  title: "Unified Info",
   description: "Criando a plataforma que unifica e ajuda",
 };
 
