@@ -30,7 +30,7 @@ const MobilePage = () => {
                                 franquia="Franquia total: 23GB"
                                 dcc="DCC: R$ 39,90"
                                 boleto="Boleto: R$ 44,90"
-                                ddd="Exclusivo para DDD: 14, 18, 27, 31, 32, 33, 34, 35, 38, 41, 43, 44, 48, 71, 79, 92 e 96."
+                                ddd="Exclusivo para DDD: 11, 12, 13, 14, 15, 16, 17, 18, 19, 21, 22, 24, 27, 28, 31, 32, 33, 34, 35, 37, 38, 41, 42, 43, 44, 45, 46, 47, 48, 49, 51, 53, 54, 55, 61, 62, 63, 64, 65, 66, 67, 68, 69, 71, 73, 74, 75, 77, 79, 81, 82, 83, 84, 85, 86, 87, 88, 89, 91, 92, 93, 94, 95, 96, 97, 98 e 99."
                                 netSales="Net Sales: CONTROLE ON 15GB + 5GB MULTI"
                                 fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
                                 modalidade="Migração, Portabilidade e Linha nova."
