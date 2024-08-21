@@ -1,37 +1,32 @@
 'use client'
 
-import Image from "next/image";
+import Cube from "../components/cubeAnimate/cube"
 import Link from "next/link";
 
 export default function notFound(){
     return (
         <>
-            <main className="w-[100vw] h-[100vh] grid place-items-center">
+            <main className="max-w-[100vw] h-[100vh] flex justify-center items-center box-content">
 
-                <div class="max-w-[1600px] max-h-full grid grid-cols-2 grid-rows-1 place-items-center gap-x-20 box-content">
+                <div className="max-w-[1800px] h-full flex justify-center items-center px-10 box-content xl:gap-10 gap-5 mobile:flex-col-reverse mobile:justify-between mobile:max-h-[85%]">
 
-                    <Image
-                        src="/images/alien.svg"
-                        alt="Imagem de um ovini abduzindo um personagem"
-                        width={500}
-                        height={549}
-                        quality={100}
-                        priority={true}
-                    />
+                    <div className="min-w-[200px]">
+                        <Cube />
+                    </div>
 
-                    <div className="grid grid-cols-1 place-items-center">
+                    <div className="max-w-[1000px] flex flex-col justify-center items-center mobile:mb-10">
 
-                        <div className="mb-10 w-full grid place-items-center text-center">
-                            <h1 className="text-[var(--text)] text-6xl mb-2">
+                        <div className="mb-10 w-full flex flex-col justify-center items-center">
+                            <h1 className="text-[var(--text)] text-6xl mb-2 mobile:text-4xl">
                                 Erro 404
                             </h1>
 
-                            <h2 className="text-[var(--text)] text-3xl tracking-wider mb-2">
+                            <h2 className="text-[var(--text)] text-3xl tracking-wider mb-2 text-center mobile:text-lg">
                                 Ops.. Página não encontrada. Parece que você andou vasculhando demais...
                             </h2>
                         </div>
 
-                        <button className="text-[var(--text)] bg-transparent px-5 py-2 rounded-3xl outline-none w-[200px] h-[40px] border-solid border-[var(--text)] border hover:bg-[var(--Azul)] hover:border-[var(--Azul)] duration-300">
+                        <button className="text-[var(--text)] bg-transparent px-5 py-2 rounded-3xl outline-none w-[200px] h-[40px] border-solid border-[var(--text)] border hover:bg-[#222222] hover:border-[#222222] duration-300">
 
                             <Link href="/" className="tracking-wider text-center">
                                 Voltar para o início

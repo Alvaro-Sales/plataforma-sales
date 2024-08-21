@@ -1,10 +1,63 @@
 "use client"
 import "../../app/globals.css"
-import Sidebar from "../../components/sidebar/sidebarComponent"
+import { useEffect, useState } from 'react'
 import CardTv from "../../components/cards/CardTv/cardTv"
+import SearchForm from "../../components/search/searchComponent"
+import Sidebar from "../../components/sidebar/sidebarComponent"
 
 
 const HDTV = () => {
+    const [searchValue, setSearchValue] = useState('')
+
+    const formatString = (value) => {
+        return value
+            .toLowerCase()
+            .trim()
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, "")
+        }
+
+    useEffect(() => {
+        const searchInput = document.getElementById('search')
+
+        const handleInput = (event) => {
+            const value = formatString(event.target.value)
+            setSearchValue(value)
+
+            const items = document.querySelectorAll('.cardsPage')
+            let hasResults = false
+
+            if (value !== '') {
+                items.forEach((cardsPage) => {
+                    const itemTitle = cardsPage.querySelector('.nomePlano').textContent
+                    if (formatString(itemTitle).indexOf(value) !== -1) {
+                        cardsPage.style.display = 'flex'
+                        hasResults = true
+                    } else {
+                        cardsPage.style.display = 'none'
+                    }
+                })
+
+                if (!hasResults) {
+                    document.querySelector('#noResults').style.display = 'block'
+                } else {
+                    document.querySelector('#noResults').style.display = 'none'
+                }
+            } else {
+                items.forEach((cardsPage) => cardsPage.style.display = 'flex')
+                document.querySelector('#noResults').style.display = 'none'
+            }
+        }
+
+        searchInput.addEventListener('input', handleInput)
+
+        // Cleanup event listener on component unmount
+        return () => {
+            searchInput.removeEventListener('input', handleInput)
+        }
+    }, [])
+
+
     return(
         <>
             <div className="w-full max-w-[100vw] flex justify-between">
@@ -13,17 +66,22 @@ const HDTV = () => {
                     <Sidebar />
                 </aside>
 
-                <main className="max-w-[100vw] w-full h-auto flex flex-col overflow-x-hidden p-5 pl-[70px]">
+                <main className="w-full max-w-[2000px] h-auto flex flex-col justify-center items-end p-5 px-[90px]">
 
-                    <section className="w-full h-full grid auto-cols-auto auto-rows-auto place-items-center gap-5">
+                    <section className="busca my-8 mx-0">
+                        <SearchForm />
+                    </section>
 
-                        <h1 className="mb-5 text-white text-3xl">
-                            HDTV Page
-                        </h1>
+                    <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6">
 
-                        <div className="w-full h-full grid gridAutoAjuste gap-5 justify-center content-center">
-                            {/* --------------- Card 1 ---------------- */}
-                            <CardTv 
+                        <div id="noResults" className="hidden">
+                            <p className="text-[var(--text)] bg-[var(--green)] py-2 px-5 rounded-full">
+                                Opss... Resultado não encontrado.
+                            </p>
+                        </div>
+
+                        {/* --------------- Card 1 ---------------- */}
+                        <CardTv 
                                 nomePlano="Claro Streaming"
                                 dcc="DCC: R$ 91,00"
                                 boleto="Boleto: R$ 96,00"
@@ -75,7 +133,6 @@ const HDTV = () => {
                                 netSales="Net Sales: nome do plano"
                                 fidelidade="Fidelidade 12 Meses, Multa de R$ 0,00."
                             />
-                        </div>
                     </section>
                 </main>
             </div>

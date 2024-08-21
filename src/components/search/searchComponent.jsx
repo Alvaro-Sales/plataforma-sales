@@ -3,6 +3,7 @@ import "../../app/globals.css"
 import { IoSearchOutline, IoCloseOutline } from "react-icons/io5";
 
 
+
 const SearchForm = () => {
     return(
         <>
@@ -24,11 +25,6 @@ const SearchForm = () => {
                     <div className="search absolute text-[var(--text)] text-[1.2em] fill-[#aeb2b6] left-[1.2em]">
                         <IoSearchOutline />
                     </div>
-                    
-
-                    <button className="close-btn absolute border-none right-[1.2em] box-border flex items-center justify-center text-[var(--text)] p-[0.1em] h-5 w-5 rounded-full bg-[var(--green)] opacity-0 invisible" type="reset">
-                        <IoCloseOutline />
-                    </button>
                 </label>
             </form>
         </>

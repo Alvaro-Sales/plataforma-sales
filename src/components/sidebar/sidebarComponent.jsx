@@ -12,7 +12,7 @@ import { HiOutlineTv, HiOutlineWifi } from "react-icons/hi2";
 export default function Sidebar(){
     return (
         <>
-            <nav className='navigation relative w-[70px] min-w-[70px] h-[100vh] bg-[var(--black-mod)] overflow-hidden hover:w-[200px]'>
+            <nav className='navigation relative w-[70px] min-w-[70px] h-[100vh] bg-[var(--black-mod)] overflow-hidden hover:w-[200px] border-r-2 border-[var(--green)]'>
 
                 <div className='flex items-center justify-start w-[200px] h-[auto] absolute top-12 left-0'>
 

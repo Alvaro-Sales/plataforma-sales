@@ -1,16 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-@layer utilities {
-    .gridAutoAjuste {
-        grid-template-columns: repeat(auto-fit, 450px);
-        grid-template-rows: repeat(auto-fit, 650px);
-    }
-}
 
 *{
     margin: 0;
@@ -55,37 +47,6 @@ aside {
     transition: var(--transition);
 }
 
-/* Style do Slider */
-#radio1:checked ~ .defaultSlide {
-    margin-left: 0%;
-}
-
-#radio2:checked ~ .defaultSlide {
-    margin-left: -25%;
-}
-
-#radio3:checked ~ .defaultSlide {
-    margin-left: -50%;
-}
-
-.navManual {
-    margin-left: calc(50% - 95px);
-}
-
-.navManual .manualBtn, .navAuto div {
-    transition: var(--transition);
-    border: 1px solid var(--green);
-}
-
-.navManual .manualBtn:not(:last-child), .navAuto div:not(:last-child) {
-    margin-right: 10px;
-}
-
-#radio1:checked ~ .navAuto .autoBtn1, #radio2:checked ~ .navAuto .autoBtn2,
-#radio3:checked ~ .navAuto .autoBtn3 {
-    background: var(--green);
-}
-
 /* Style do container de cards */
 .containerCard:not(:last-child) {
     margin-right: 10px;
@@ -105,16 +66,76 @@ aside {
     fill: var(--green);
 }
 
-.input:valid ~ .close-btn {
-    opacity: 1;
-    visibility: visible;
-}
-
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
     -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
     -webkit-transition-delay: 9999s;
 }
+
+
+/* Animação do cubo do erro 404 */
+.container {
+    background-color: #414141;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        translate: 0px 36px;
+    }
+    50% {
+        translate: 0px 46px;
+    }
+}
+
+@keyframes bounce2 {
+    0%, 100% {
+        translate: 0px 46px;
+    }
+    50% {
+        translate: 0px 56px;
+    }
+}
+  
+@keyframes umbral {
+    0% {
+        stop-color: rgba(9, 166, 3, 0.18);
+    }
+    50% {
+        stop-color: rgba(9, 166, 3, 0.5);
+    }
+    100% {
+        stop-color: rgba(9, 166, 3, 0.18);
+    }
+}
+
+@keyframes partciles {
+    0%,
+    100% {
+        translate: 0px 16px;
+    }
+    50% {
+        translate: 0px 6px;
+    }
+}
+
+#particles {
+    animation: partciles 4s ease-in-out infinite;
+}
+
+#animatedStop {
+    animation: umbral 4s infinite;
+}
+
+#bounce {
+    animation: bounce 4s ease-in-out infinite;
+    translate: 0px 36px;
+}
+
+#bounce2 {
+    animation: bounce2 4s ease-in-out infinite;
+    translate: 0px 46px;
+    animation-delay: 0.5s;
+}  
 

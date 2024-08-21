@@ -7,9 +7,9 @@ module.exports = {
     "./public/**/*.html",
   ],
   theme: {
-    extend: {
-      
-    },
+    screens: {
+      mobile: {'max': '768px'}
+    }
   },
   plugins: [],
 };
