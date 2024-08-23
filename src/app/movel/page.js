@@ -81,15 +81,15 @@ const MobilePage = () => {
                         </div>
 
                         {/* --------------- Card 1 ---------------- */}
-                        <CardMobile 
+                        <CardMobile
                             categoria="Exclusivo"
-                            nomePlano="Controle 20GB"
-                            extraPlay="Bônus: 3GB Extra Play"
-                            franquia="Franquia total: 23GB"
+                            nomePlano="Controle 15GB"
+                            extraPlay="Bônus: 5GB + 8GB Extra Play"
+                            franquia="Franquia total: 28GB"
                             dcc="DCC: R$ 39,90"
                             boleto="Boleto: R$ 44,90"
                             ddd="Exclusivo para DDD: 14, 18, 22, 27, 31, 32, 33, 34, 35, 37, 38, 41, 42, 43, 44, 45, 48, 49, 55, 66, 71, 77, 79, 92, 94 e 96."
-                            netSales="Net Sales: CONTROLE ON 15GB + 5GB MULTI"
+                            netSales="Net Sales: CONTROLE 15GB + 5GB MULTI"
                             fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
                             modalidade="Migração, Portabilidade e Linha nova."
                         />
