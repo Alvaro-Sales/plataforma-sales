@@ -79,7 +79,7 @@ export default function Home(){
           <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6">
 
             <div id="noResults" className="hidden">
-              <p className="text-[var(--text)] bg-[var(--green)] py-2 px-5 rounded-full">
+              <p className="text-[var(--text)] bg-[var(--green)] py-5 px-7 rounded-full">
                 Opss... Resultado não encontrado.
               </p>
             </div>
