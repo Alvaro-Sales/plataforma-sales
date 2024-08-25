@@ -1,12 +1,13 @@
 'use client'
-
-import "./globals.css";
-// import Image from "next/image";
+import "./globals.css"
+import Link from "next/link"
+import Image from "next/image"
 import { useEffect, useState } from 'react'
 import CardMobile from "../components/cards/CardMobile/cardMobile"
 import CardTv from "../components/cards/CardTv/cardTv"
 import SearchForm from "../components/search/searchComponent"
 import Sidebar from "../components/sidebar/sidebarComponent"
+import { AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai"
 
 
 
@@ -70,16 +71,16 @@ export default function Home(){
           <Sidebar />
         </aside>
 
-        <main className="w-full max-w-[2000px] h-auto flex flex-col justify-center items-end p-5 px-[90px]">
+        <main className="w-full max-w-[2000px] h-auto flex flex-col p-5 px-[90px] relative">
 
-          <section className="busca my-8 mx-0">
+          <section className="busca my-8 mx-0 absolute right-[90px]">
             <SearchForm />
           </section>
 
-          <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6">
+          <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6 mt-[105px]">
 
             <div id="noResults" className="hidden">
-              <p className="text-[var(--text)] bg-[var(--green)] py-5 px-7 rounded-full">
+              <p className="text-[var(--text)] bg-[var(--green)] py-2 px-5 rounded-full">
                 Opss... Resultado não encontrado.
               </p>
             </div>
@@ -120,6 +121,50 @@ export default function Home(){
             />
           </section>
         </main>
+      </div>
+
+      <div className="max-w-[100vw] h-auto flex flex-col items-center flex-wrap">
+        <nav className="w-full py-5 px-20 bg-[var(--black-mod)]">
+          <Image 
+              src="/images/logo.png"
+              width={50}
+              height={50}
+              alt="Logotipo"
+              priority="true"
+              className="ml-5 mb-5"/>
+
+          <ul className="flex justify-center items-center gap-10 flex-wrap">
+            <li>
+              <Link href={"pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300"> Home </Link>
+            </li>
+
+            <li>
+              <Link href={"pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300"> Móvel </Link>
+            </li>
+
+            <li>
+              <Link href={"pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300"> HDTV </Link>
+            </li>
+
+            <li>
+              <Link href={"pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300"> Wi-Fi </Link>
+            </li>
+          </ul>
+
+          <div className="w-full flex justify-between items-center mt-5 px-5 gap-10 flex-wrap mobile:flex-col-reverse mobile:justify-center">
+            <p className="text-[#f2f2f2b0]">&copy; 2024 <span className="copy text-xl"> Álvaro Sales</span>, Todos os direitos reservados.</p>
+            
+            <div className="flex justify-center items-center gap-10 flex-wrap">
+              <Link href="https://www.instagram.com/alvarosales.tech/" target="_blank" className="text-[var(--icon)] hover:text-[var(--text)] text-[30px] transition-colors duration-300">
+                <AiOutlineInstagram />
+              </Link>
+
+              <Link href="https://github.com/Alvaro-Sales/" target="_blank" className="text-[var(--icon)] hover:text-[var(--text)] text-[30px] transition-colors duration-300">
+                <AiOutlineGithub />
+              </Link>
+            </div>
+          </div>
+        </nav>
       </div>
     </>
   );

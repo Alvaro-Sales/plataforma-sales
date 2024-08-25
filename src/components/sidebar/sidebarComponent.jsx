@@ -44,7 +44,7 @@ export default function Sidebar(){
 
                     <li className='itemList relative mb-[15px] ml-[5px]'>
 
-                        <Link href="../movel" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
+                        <Link href="../pages/movel" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
 
                             <MdOutline5G className='iconMenu text-[var(--text)] min-w-[30px] min-h-[30px] relative block ml-[5px]'/>
 
@@ -56,7 +56,7 @@ export default function Sidebar(){
 
                     <li className='itemList relative mb-[15px] ml-[5px]'>
 
-                        <Link href="../hdtv" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
+                        <Link href="#" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
 
                             <HiOutlineTv className='iconMenu text-[var(--text)] min-w-[30px] min-h-[30px] relative block ml-[5px]' />
 
@@ -68,7 +68,7 @@ export default function Sidebar(){
 
                     <li className='itemList relative mb-[15px] ml-[5px]'>
 
-                        <Link href="../wifi" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
+                        <Link href="#" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
 
                             <HiOutlineWifi className='iconMenu text-[var(--text)] min-w-[30px] min-h-[30px] relative block ml-[5px]' />
 

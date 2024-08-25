@@ -12,6 +12,7 @@
 
 :root {
     --text: #F2F2F2;
+    --icon: #f2f2f2b0;
     --green: #09A603;
     --bg-body: #454545;
     --black-mod: #222222;
@@ -32,7 +33,7 @@ aside {
     transition: var(--transition);
 }
 
-.logo {
+.logo, .copy {
     cursor: default;
     font-weight: 400;
     font-style: normal;
