@@ -71,7 +71,7 @@ export default function Home(){
           <Sidebar />
         </aside>
 
-        <main className="w-full max-w-[2000px] h-auto flex flex-col p-5 px-[90px] relative">
+        <main className="w-full max-w-[2000px] h-auto min-h-[767px] flex flex-col p-5 px-[90px] relative">
 
           <section className="busca my-8 mx-0 absolute right-[90px]">
             <SearchForm />

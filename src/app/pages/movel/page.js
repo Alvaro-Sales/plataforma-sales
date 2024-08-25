@@ -69,7 +69,7 @@ const MobilePage = () => {
                     <Sidebar />
                 </aside>
 
-                <main className="w-full h-auto flex flex-col justify-center items-end p-5 pl-[90px] pr-10">
+                <main className="w-full h-auto min-h-[767px] flex flex-col items-end p-5 pl-[90px] pr-10">
 
                     <section className="busca my-8 mx-0">
                         <SearchForm />
