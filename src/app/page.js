@@ -112,13 +112,16 @@ export default function Home(){
             />
 
             {/* --------------- Card 3 ---------------- */}
-            <CardTv 
-                nomePlano="Claro Streaming"
-                dcc="DCC: R$ 91,00"
-                boleto="Boleto: R$ 96,00"
-                netSales="Net Sales: BOX TOP NETFLIX ANUNCIO"
-                fidelidade="Não possui fidelidade. Multa de R$ 0,00."
-            />
+              <CardMobile 
+                nomePlano="Controle 20GB"
+                extraPlay="Bônus: 5GB + 10GB Extra Play"
+                franquia="Franquia total: 35GB"
+                dcc="DCC: R$ 59,90"
+                boleto="Boleto: R$ 64,90"
+                netSales="Net Sales: CONTROLE 20GB + 5GB MULTI"
+                fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
+                modalidade="Migração, Portabilidade e Linha nova."
+              />
           </section>
         </main>
       </div>
