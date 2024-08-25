@@ -248,25 +248,25 @@ const MobilePage = () => {
 
                     <ul className="flex justify-center items-center gap-10 flex-wrap">
                         <li>
-                            <Link href={"pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300">
+                            <Link href={"/"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300">
                                 Home
                             </Link>
                         </li>
 
                         <li>
-                            <Link href={"pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300">
+                            <Link href={"../pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300">
                                 Móvel
                             </Link>
                         </li>
 
                         <li>
-                            <Link href={"pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300">
+                            <Link href={"#"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300">
                                 HDTV 
                             </Link>
                         </li>
 
                         <li>
-                            <Link href={"pages/movel"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300">
+                            <Link href={"#"} className="text-[#f2f2f2b0] hover:text-[var(--text)] text-base transition-colors duration-300">
                                 Wi-Fi
                             </Link>
                         </li>
