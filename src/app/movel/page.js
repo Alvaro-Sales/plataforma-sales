@@ -132,7 +132,6 @@ const MobilePage = () => {
 
                         {/* --------------- Card 5 ---------------- */}
                         <CardMobile 
-                            categoria="Portabilidade"
                             nomePlano="Pós pago 25GB + 25GB"
                             incluso="Incluso: Passaporte Américas (titular)."
                             franquia="Franquia total: 50GB"
@@ -142,7 +141,7 @@ const MobilePage = () => {
                             dependentePago="Dependente pago: Até 1"
                             dependenteGratis="Dependente Gratuito: 0"
                             fidelidade="Fidelidade 12 Meses, Multa de R$ 240,00."
-                            modalidade="Portabilidade e Linha nova."
+                            modalidade="Migração, Portabilidade e Linha nova."
                         />
 
                         {/* --------------- Card 6 ---------------- */}
