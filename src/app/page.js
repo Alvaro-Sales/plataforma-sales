@@ -71,18 +71,18 @@ export default function Home(){
           <Sidebar />
         </aside>
 
-        <main className="w-full max-w-[2000px] h-auto min-h-[767px] flex flex-col p-5 px-[90px] items-end">
+        <main className="w-full max-w-[2000px] h-auto min-h-[767px] flex flex-col p-5 pl-[90px] items-end">
 
-          <div className="w-full h-[200px] bg-[#3333338e] rounded-xl flex items-center justify-center p-5 gap-10">
-          <Image 
+          <div className="w-full h-auto bg-[#3333338e] rounded-xl flex items-center justify-center p-10 gap-10 flex-wrap">
+            <Image 
               src="/images/programador.svg"
               width={150}
               height={150}
               alt="Descrição da imagem"
               priority="true"/>
 
-            <div className="max-w-[600px] flex flex-col items-center justify-center text-justify">
-              <h1 className="text-[var(--text)] text-xl">
+            <div className="max-w-[500px] flex flex-col items-center justify-center text-justify">
+              <h1 className="text-[var(--text)] text-xl text-center">
                 Olá, seja bem-vindo a plataforma Álvaro Sales.
               </h1>
 
