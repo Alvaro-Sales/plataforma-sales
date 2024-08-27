@@ -17,7 +17,7 @@ export default function Sidebar(){
                 <div className='flex items-center justify-start w-[200px] h-[auto] absolute top-12 left-0'>
 
                     <Image 
-                        src="/images/logo.png"
+                        src="/images/logo.svg"
                         width={45}
                         height={45}
                         alt="Logotipo"

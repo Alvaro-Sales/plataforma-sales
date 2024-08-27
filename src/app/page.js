@@ -71,13 +71,32 @@ export default function Home(){
           <Sidebar />
         </aside>
 
-        <main className="w-full max-w-[2000px] h-auto min-h-[767px] flex flex-col p-5 px-[90px] relative">
+        <main className="w-full max-w-[2000px] h-auto min-h-[767px] flex flex-col p-5 px-[90px] items-end">
 
-          <section className="busca my-8 mx-0 absolute right-[90px]">
+          <div className="w-full h-[200px] bg-[#3333338e] rounded-xl flex items-center justify-center p-5 gap-10">
+          <Image 
+              src="/images/programador.svg"
+              width={150}
+              height={150}
+              alt="Descrição da imagem"
+              priority="true"/>
+
+            <div className="max-w-[600px] flex flex-col items-center justify-center text-justify">
+              <h1 className="text-[var(--text)] text-xl">
+                Olá, seja bem-vindo a plataforma Álvaro Sales.
+              </h1>
+
+              <p className="text-[var(--text)] text-base mt-2">
+                Sinta-se a vontade para consultar o que precisa. Caso não encontre a informação que precisa fale com o seu supervisor ou com o desenvolvedor da plataforma "Álvaro sales" para mais detalhes.
+              </p>
+            </div>
+          </div>
+
+          <div className="busca my-5 mx-0">
             <SearchForm />
-          </section>
+          </div>
 
-          <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6 mt-[105px]">
+          <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6 mt-5">
 
             <div id="noResults" className="hidden">
               <p className="text-[var(--text)] bg-[var(--green)] py-2 px-5 rounded-full">
@@ -129,7 +148,7 @@ export default function Home(){
       <div className="max-w-[100vw] h-auto flex flex-col items-center flex-wrap">
         <nav className="w-full py-5 px-20 bg-[var(--black-mod)]">
           <Image 
-              src="/images/logo.png"
+              src="/images/logo.svg"
               width={50}
               height={50}
               alt="Logotipo"

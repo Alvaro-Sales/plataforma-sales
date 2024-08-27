@@ -71,9 +71,9 @@ const MobilePage = () => {
 
                 <main className="w-full h-auto min-h-[767px] flex flex-col items-end p-5 pl-[90px] pr-10">
 
-                    <section className="busca my-8 mx-0">
+                    <div className="busca my-8 mx-0">
                         <SearchForm />
-                    </section>
+                    </div>
 
                     <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6">
 
@@ -134,7 +134,7 @@ const MobilePage = () => {
                         />
 
                         {/* --------------- Card 5 ---------------- */}
-                        <CardMobile
+                        <CardMobile 
                             nomePlano="Pós pago 25GB + 25GB"
                             incluso="Incluso: Passaporte Américas (titular)."
                             franquia="Franquia total: 50GB"
@@ -238,7 +238,7 @@ const MobilePage = () => {
             <div className="max-w-[100vw] h-auto flex flex-col items-center flex-wrap">
                 <nav className="w-full py-5 px-20 bg-[var(--black-mod)]">
                     <Image 
-                        src="/images/logo.png"
+                        src="/images/logo.svg"
                         width={50}
                         height={50}
                         alt="Logotipo"
