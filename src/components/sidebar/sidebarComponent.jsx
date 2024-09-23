@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import "../../app/globals.css"
-import { useEffect } from "react"
 import { MdOutline5G } from "react-icons/md";
 import { IoHomeOutline } from "react-icons/io5"; 
 import { HiOutlineTv, HiOutlineWifi } from "react-icons/hi2";
@@ -44,7 +43,7 @@ export default function Sidebar(){
 
                     <li className='itemList relative mb-[15px] ml-[5px]'>
 
-                        <Link href="../pages/movel" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
+                        <Link href="../movel" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
 
                             <MdOutline5G className='iconMenu text-[var(--text)] min-w-[30px] min-h-[30px] relative block ml-[5px]'/>
 
@@ -56,7 +55,7 @@ export default function Sidebar(){
 
                     <li className='itemList relative mb-[15px] ml-[5px]'>
 
-                        <Link href="#" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
+                        <Link href="../hdtv" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
 
                             <HiOutlineTv className='iconMenu text-[var(--text)] min-w-[30px] min-h-[30px] relative block ml-[5px]' />
 
@@ -81,25 +80,5 @@ export default function Sidebar(){
             </nav>
         </>
     )
-}
-
-
-// Criando função para verificar qual link está ativo para aplicar efeito de selecionado no menu
-
-const checkActive = () => {
-    useEffect(() => {
-        const list = document.querySelectorAll('.itemList')
-
-        function activeLink() {
-            list.forEach((item) => item.classList.remove('active'))
-            this.classList.add('active')
-        }
-
-        list.forEach((item) => item.addEventListener('click', activeLink))
-
-        return () => {
-            list.forEach((item) => item.removeEventListener('click', activeLink))
-        }
-    }, [])
 }
 

@@ -3,16 +3,18 @@
 
 
 //Aqui vou criar o componente card para a tv
-const CardTv = ({nomePlano, dcc, boleto, netSales, fidelidade}) => {
+const CardTv = ({nomePlano, dcc, boleto, grade, netSales, fidelidade}) => {
     return (
         <>
-            <div className="cardsPage w-[450px] h-[650px] rounded-2xl bg-[var(--black-mod)] flex flex-col justify-center p-5 relative transition-transform transform hover:scale-105">
+            <div className="cardsPage w-[450px] h-[500px] rounded-2xl bg-[var(--black-mod)] flex flex-col justify-center p-5 relative transition-transform transform hover:scale-105">
 
-                {nomePlano && <h1 className="nomePlano text-center text-2xl tracking-[1px] text-[var(--text)] mb-5"> {nomePlano} </h1>}
+                {nomePlano && <h1 className="nomePlano text-center text-2xl tracking-[1px] text-[var(--text)] mb-5 uppercase"> {nomePlano} </h1>}
 
                 {dcc && <p className="text-lg mb-2 text-[var(--text)]"> {dcc} </p>}
 
                 {boleto && <p className="text-lg mb-2 text-[var(--text)]"> {boleto} </p>}
+
+                {grade && <p className="text-lg mb-2 text-[var(--text)]"> {grade} </p>}
 
                 <div className="mt-2">
                     {netSales && <p className="text-lg mb-2 text-[var(--text)]"> {netSales} </p>}

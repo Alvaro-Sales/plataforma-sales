@@ -4,7 +4,6 @@ import Link from "next/link"
 import Image from "next/image"
 import { useEffect, useState } from 'react'
 import CardMobile from "../components/cards/CardMobile/cardMobile"
-import CardTv from "../components/cards/CardTv/cardTv"
 import SearchForm from "../components/search/searchComponent"
 import Sidebar from "../components/sidebar/sidebarComponent"
 import { AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai"
@@ -66,11 +65,6 @@ export default function Home(){
   return (
     <>
       <div className="w-full max-w-[2000px] flex justify-between">
-
-        <aside className="fixed m-0 z-50">
-          <Sidebar />
-        </aside>
-
         <main className="w-full max-w-[2000px] h-auto min-h-[767px] flex flex-col p-5 pl-[90px] items-end">
 
           <div className="w-full h-auto bg-[#3333338e] rounded-xl flex items-center justify-center p-10 gap-10 flex-wrap">
@@ -106,7 +100,7 @@ export default function Home(){
 
             {/* --------------- Card 1 ---------------- */}
             <CardMobile
-                categoria="Exclusivo"
+                categoria="Exclusivo DDD"
                 nomePlano="Controle 15GB"
                 extraPlay="Bônus: 5GB + 8GB Extra Play"
                 franquia="Franquia total: 28GB"
@@ -120,6 +114,19 @@ export default function Home(){
 
             {/* --------------- Card 2 ---------------- */}
             <CardMobile 
+                categoria="Portabilidade"
+                nomePlano="Controle 15GB"
+                extraPlay="Bônus: 5GB + 8GB Extra Play"
+                franquia="Franquia total: 28GB"
+                dcc="DCC: R$ 44,90"
+                boleto="Boleto: R$ 49,90"
+                netSales="Net Sales: CONTROLE 15GB + 5GB MULTI + 5GB RENT PORT"
+                fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
+                modalidade="Portabilidade e Linha nova."
+            />
+
+            {/* --------------- Card 3 ---------------- */}
+            <CardMobile 
                 nomePlano="Controle 15GB"
                 extraPlay="Bônus: 5GB + 8GB Extra Play"
                 franquia="Franquia total: 28GB"
@@ -129,18 +136,6 @@ export default function Home(){
                 fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
                 modalidade="Migração, Portabilidade e Linha nova."
             />
-
-            {/* --------------- Card 3 ---------------- */}
-              <CardMobile 
-                nomePlano="Controle 20GB"
-                extraPlay="Bônus: 5GB + 10GB Extra Play"
-                franquia="Franquia total: 35GB"
-                dcc="DCC: R$ 59,90"
-                boleto="Boleto: R$ 64,90"
-                netSales="Net Sales: CONTROLE 20GB + 5GB MULTI"
-                fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
-                modalidade="Migração, Portabilidade e Linha nova."
-              />
           </section>
         </main>
       </div>

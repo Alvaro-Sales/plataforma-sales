@@ -1,6 +1,6 @@
 'use client'
 import "../../app/globals.css"
-import { IoSearchOutline, IoCloseOutline } from "react-icons/io5";
+import { IoSearchOutline } from "react-icons/io5";
 
 
 
