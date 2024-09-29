@@ -4,7 +4,7 @@ import Image from 'next/image'
 import "../../app/globals.css"
 import { MdOutline5G } from "react-icons/md";
 import { IoHomeOutline } from "react-icons/io5"; 
-import { HiOutlineTv, HiOutlineWifi } from "react-icons/hi2";
+// import { HiOutlineTv, HiOutlineWifi } from "react-icons/hi2";
 
 
 //Aqui vou criar o componente Sidebar
@@ -49,30 +49,6 @@ export default function Sidebar(){
 
                             <span className='text-[var(--text)] relative block pl-5 whitespace-nowrap'>
                                 Móvel
-                            </span>
-                        </Link>
-                    </li>
-
-                    <li className='itemList relative mb-[15px] ml-[5px]'>
-
-                        <Link href="../hdtv" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
-
-                            <HiOutlineTv className='iconMenu text-[var(--text)] min-w-[30px] min-h-[30px] relative block ml-[5px]' />
-
-                            <span className='text-[var(--text)] relative block pl-5 whitespace-nowrap'>
-                                HDTV
-                            </span>
-                        </Link>
-                    </li>
-
-                    <li className='itemList relative mb-[15px] ml-[5px]'>
-
-                        <Link href="#" className='link w-full h-full p-[10px] flex items-center relative rounded-s-3xl bg-transparent hover:bg-[var(--green)]'>
-
-                            <HiOutlineWifi className='iconMenu text-[var(--text)] min-w-[30px] min-h-[30px] relative block ml-[5px]' />
-
-                            <span className='text-[var(--text)] relative block pl-5 whitespace-nowrap'>
-                                Wi-Fi
                             </span>
                         </Link>
                     </li>

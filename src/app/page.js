@@ -2,66 +2,16 @@
 import "./globals.css"
 import Link from "next/link"
 import Image from "next/image"
-import { useEffect, useState } from 'react'
-import CardMobile from "../components/cards/CardMobile/cardMobile"
-import SearchForm from "../components/search/searchComponent"
-import Sidebar from "../components/sidebar/sidebarComponent"
-import { AiOutlineInstagram, AiOutlineGithub } from "react-icons/ai"
+import { RiAppleLine } from "react-icons/ri"
+import { TbBrandNetflix, TbTableShare } from "react-icons/tb"
+import { HiOutlineSignal } from "react-icons/hi2"
+import { MdOutlineLocationOn } from "react-icons/md"
+import CardOption from "../components/cards/cardOption/cardOption.jsx"
+import { AiOutlineInstagram, AiOutlineGithub, AiOutlineAppstoreAdd } from "react-icons/ai"
 
 
 
 export default function Home(){
-  const [searchValue, setSearchValue] = useState('');
-
-  const formatString = (value) => {
-    return value
-      .toLowerCase()
-      .trim()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, "");
-  };
-
-  useEffect(() => {
-    const searchInput = document.getElementById('search');
-
-    const handleInput = (event) => {
-      const value = formatString(event.target.value);
-      setSearchValue(value);
-
-      const items = document.querySelectorAll('.cardsPage');
-      let hasResults = false;
-
-      if (value !== '') {
-        items.forEach((cardsPage) => {
-          const itemTitle = cardsPage.querySelector('.nomePlano').textContent;
-          if (formatString(itemTitle).indexOf(value) !== -1) {
-            cardsPage.style.display = 'flex';
-            hasResults = true;
-          } else {
-            cardsPage.style.display = 'none';
-          }
-        });
-
-        if (!hasResults) {
-          document.querySelector('#noResults').style.display = 'block';
-        } else {
-          document.querySelector('#noResults').style.display = 'none';
-        }
-      } else {
-        items.forEach((cardsPage) => cardsPage.style.display = 'flex');
-        document.querySelector('#noResults').style.display = 'none';
-      }
-    };
-
-    searchInput.addEventListener('input', handleInput);
-
-    // Cleanup event listener on component unmount
-    return () => {
-      searchInput.removeEventListener('input', handleInput);
-    };
-  }, []);
-
-
   return (
     <>
       <div className="w-full max-w-[2000px] flex justify-between">
@@ -75,7 +25,7 @@ export default function Home(){
               alt="Descrição da imagem"
               priority="true"/>
 
-            <div className="max-w-[500px] flex flex-col items-center justify-center text-justify">
+            <div className="max-w-[530px] flex flex-col items-center justify-center text-justify">
               <h1 className="text-[var(--text)] text-xl text-center">
                 Olá, seja bem-vindo a plataforma Álvaro Sales.
               </h1>
@@ -86,56 +36,72 @@ export default function Home(){
             </div>
           </div>
 
-          <div className="busca my-5 mx-0">
-            <SearchForm />
-          </div>
+          <section className="w-full h-auto">
+            <h1 className="text-center text-3xl text-[var(--text)] mt-10 mb-5 flex items-center justify-center gap-5">
+              Opções de serviços
 
-          <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6 mt-5">
+              <span className="bg-[var(--greenYellow)] text-[#222222] text-base py-1 px-2 rounded-full">
+                NEW
+              </span>
+            </h1>
 
-            <div id="noResults" className="hidden">
-              <p className="text-[var(--text)] bg-[var(--green)] py-2 px-5 rounded-full">
-                Opss... Resultado não encontrado.
-              </p>
+            <div className="options w-full h-auto flex justify-center flex-wrap items-center mb-8 gap-6 mt-5">
+              {/* -----Card 1----- */}
+              <CardOption
+                link="/pdf/tabelaPrecos.pdf"
+                iconOption={<TbTableShare className="text-[var(--green)]" />}
+                title="Tabela de preços"
+                description="Consulte aqui a tebla oficial atualizada de preços."
+              />
+              
+              {/* -----Card 2----- */}
+              <CardOption
+                link="https://www.claro.com.br/mapa-de-cobertura"
+                iconOption={<HiOutlineSignal className="text-[var(--green)]" />}
+                title="Cobertura de sinal"
+                description="Verifique se onde o cliente mora tem cobertura de sinal."
+              />
+
+              {/* -----Card 3----- */}
+              <CardOption
+                link="https://www.claro.com.br/encontre-uma-loja"
+                iconOption={<MdOutlineLocationOn className="text-[var(--green)]" />}
+                title="Loja mais próxima"
+                description="Localize a loja mais próxima do cliente."
+              />
+
+              {/* -----Card 4----- */}
+              <CardOption
+                link="https://www.claro.com.br/claro-tv-mais/assinar/globoplay#ativacao"
+                iconOption={<AiOutlineAppstoreAdd className="text-[var(--green)]" />}
+                title="Ativação da Globoplay"
+                description="passo a passo para ativação do a la carte Globoplay."
+              />
+
+              {/* -----Card 5----- */}
+              <CardOption
+                link="https://www.claro.com.br/max#ativacao"
+                iconOption={<AiOutlineAppstoreAdd className="text-[var(--green)]" />}
+                title="Ativação do MAX"
+                description="passo a passo para ativação do a la carte MAX."
+              />
+
+              {/* -----Card 6----- */}
+              <CardOption
+                link="https://www.claro.com.br/claro-tv-mais/assinar/apple-tv#ativar"
+                iconOption={<RiAppleLine className="text-[var(--green)]" />}
+                title="Ativação do Apple tv+"
+                description="passo a passo para ativação do a la carte Apple tv+."
+              />
+
+              {/* -----Card 7----- */}
+              <CardOption
+                link="https://www.claro.com.br/netflix#ativacao"
+                iconOption={<TbBrandNetflix className="text-[var(--green)]" />}
+                title="Ativação da Netflix"
+                description="passo a passo para ativação do a la carte Netflix."
+              />
             </div>
-
-            {/* --------------- Card 1 ---------------- */}
-            <CardMobile
-                categoria="Exclusivo DDD"
-                nomePlano="Controle 15GB"
-                extraPlay="Bônus: 5GB + 8GB Extra Play"
-                franquia="Franquia total: 28GB"
-                dcc="DCC: R$ 39,90"
-                boleto="Boleto: R$ 44,90"
-                ddd="Exclusivo para DDD: 14, 18, 22, 27, 31, 32, 33, 34, 35, 37, 38, 41, 42, 43, 44, 45, 48, 49, 55, 66, 71, 77, 79, 92, 94 e 96."
-                netSales="Net Sales: CONTROLE 15GB + 5GB MULTI"
-                fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
-                modalidade="Migração, Portabilidade e Linha nova."
-            />
-
-            {/* --------------- Card 2 ---------------- */}
-            <CardMobile 
-                categoria="Portabilidade"
-                nomePlano="Controle 15GB"
-                extraPlay="Bônus: 5GB + 8GB Extra Play"
-                franquia="Franquia total: 28GB"
-                dcc="DCC: R$ 44,90"
-                boleto="Boleto: R$ 49,90"
-                netSales="Net Sales: CONTROLE 15GB + 5GB MULTI + 5GB RENT PORT"
-                fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
-                modalidade="Portabilidade e Linha nova."
-            />
-
-            {/* --------------- Card 3 ---------------- */}
-            <CardMobile 
-                nomePlano="Controle 15GB"
-                extraPlay="Bônus: 5GB + 8GB Extra Play"
-                franquia="Franquia total: 28GB"
-                dcc="DCC: R$ 49,90"
-                boleto="Boleto: R$ 54,90"
-                netSales="Net Sales: CONTROLE 15GB + 5GB MULTI"
-                fidelidade="Fidelidade 12 Meses, Multa de R$ 120,00."
-                modalidade="Migração, Portabilidade e Linha nova."
-            />
           </section>
         </main>
       </div>
