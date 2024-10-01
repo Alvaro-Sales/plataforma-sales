@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text: #F2F2F2;
+    --icon: #f2f2f2b0;
+    --green: #09A603;
+    --bg-body: #454545;
+    --black-mod: #222222;
+    --greenYellow: #CBF23D;
+    --transition: all 0.5s ease;
+}
+
+body {
+    background: var(--bg-body);
+}
+
+/* Style do Sidebar */
+aside {
+    margin-right: 20px;
+}
+
+.navigation {
+    transition: var(--transition);
+}
+
+.logo, .copy {
+    cursor: default;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Marck Script', cursive;
+}
+
+.navigation .list .itemList.active {
+    background: var(--green);
+}
+
+.navigation .list .itemList .link:hover {
+    transition: var(--transition);
+}
+
+/* Style do container de cards */
+.containerCard:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Style do Search */
+.input {
+    margin-inline: min(2em,calc(1.2em + 0.9rem));
+}
+
+.input:focus ~ .fancy-bg {
+    border: 1px solid var(--green);
+    background: transparent;
+}
+
+.input:focus ~ .search {
+    fill: var(--green);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
+
+/* Animação do cubo do erro 404 */
+.container {
+    background-color: #414141;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        translate: 0px 36px;
+    }
+    50% {
+        translate: 0px 46px;
+    }
+}
+
+@keyframes bounce2 {
+    0%, 100% {
+        translate: 0px 46px;
+    }
+    50% {
+        translate: 0px 56px;
+    }
+}
+  
+@keyframes umbral {
+    0% {
+        stop-color: rgba(9, 166, 3, 0.18);
+    }
+    50% {
+        stop-color: rgba(9, 166, 3, 0.5);
+    }
+    100% {
+        stop-color: rgba(9, 166, 3, 0.18);
+    }
+}
+
+@keyframes partciles {
+    0%,
+    100% {
+        translate: 0px 16px;
+    }
+    50% {
+        translate: 0px 6px;
+    }
+}
+
+#particles {
+    animation: partciles 4s ease-in-out infinite;
+}
+
+#animatedStop {
+    animation: umbral 4s infinite;
+}
+
+#bounce {
+    animation: bounce 4s ease-in-out infinite;
+    translate: 0px 36px;
+}
+
+#bounce2 {
+    animation: bounce2 4s ease-in-out infinite;
+    translate: 0px 46px;
+    animation-delay: 0.5s;
+}  
+
