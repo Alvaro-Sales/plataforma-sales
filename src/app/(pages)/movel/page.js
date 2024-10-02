@@ -66,7 +66,7 @@ const MobilePage = () => {
                         <SearchForm />
                     </div>
 
-                    <section className="w-full h-auto flex justify-around flex-wrap items-center mb-8 gap-6">
+                    <section className="w-full h-auto flex justify-center flex-wrap items-center mb-8 gap-6">
 
                         <div id="noResults" className="hidden">
                             <p className="text-[var(--text)] bg-[var(--green)] py-2 px-5 rounded-full">
