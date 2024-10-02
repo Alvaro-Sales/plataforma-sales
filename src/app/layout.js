@@ -1,8 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google"
-import Footer from "../components/footer/footer.jsx"
+import Footer from "../components/footer/footer"
 import { Analytics } from '@vercel/analytics/react'
-import Sidebar from "../components/sidebar/sidebarComponent.jsx"
+import Sidebar from "../components/sidebar/sidebarComponent"
 
 const inter = Inter({ subsets: ["latin"] });
 

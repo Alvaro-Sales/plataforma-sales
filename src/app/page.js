@@ -1,12 +1,11 @@
 'use client'
 import "./globals.css"
-import Link from "next/link"
 import Image from "next/image"
 import { RiAppleLine } from "react-icons/ri"
 import { TbBrandNetflix, TbTableShare } from "react-icons/tb"
 import { HiOutlineSignal } from "react-icons/hi2"
 import { MdOutlineLocationOn } from "react-icons/md"
-import CardOption from "../components/cards/cardOption/cardOption.jsx"
+import CardOption from "../components/cards/cardOption/cardOption"
 import { AiOutlineAppstoreAdd } from "react-icons/ai"
 
 

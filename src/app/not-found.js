@@ -1,7 +1,7 @@
 'use client'
 
 import Cube from "../components/cubeAnimate/cube"
-import Link from "next/link";
+import Link from "next/link"
 
 export default function notFound(){
     return (

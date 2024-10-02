@@ -1,5 +1,6 @@
 "use client"
 import "../../globals.css"
+import { GoAlert } from "react-icons/go"
 import { useEffect, useState } from 'react'
 import SearchForm from "../../../components/search/searchComponent"
 import CardMobile from "../../../components/cards/CardMobile/cardMobile"
@@ -61,6 +62,24 @@ const MobilePage = () => {
         <>
             <div className="w-full max-w-[2000px] flex justify-between">
                 <main className="w-full h-auto min-h-[767px] flex flex-col items-end p-5 pl-[90px] pr-10">
+
+                    <div className="w-full flex flex-col items-center justify-center">
+                        <div className="flex items-center justify-center max-w-[800px] h-auto bg-[#222] p-5 gap-x-5 rounded-xl border-l-8 border-l-[#fff022]">
+                            <div className="icon">
+                                <GoAlert className="text-[#fff022] text-4xl animate-pulse" />
+                            </div>
+
+                            <div className="text-[var(--text)] flex flex-col gap-2">
+                                <h1 className="text-2xl">
+                                    Aviso importante
+                                </h1>
+
+                                <p className="text-justify text-base tracking-[2px]">
+                                    Planos atualizados até o dia <span className="text-[#ff0000]">30/09/2024</span>, por falta de investimento no projeto, o projeto será descontinuado em breve!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                     <div className="busca my-8 mx-0">
                         <SearchForm />
