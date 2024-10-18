@@ -48,6 +48,33 @@ aside {
     transition: var(--transition);
 }
 
+/* Style do container de cards */
+.containerCard:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* Style do Search */
+.input {
+    margin-inline: min(2em,calc(1.2em + 0.9rem));
+}
+
+.input:focus ~ .fancy-bg {
+    border: 1px solid var(--green);
+    background: transparent;
+}
+
+.input:focus ~ .search {
+    fill: var(--green);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+}
+
 
 /* Animação do cubo do erro 404 */
 .container {
@@ -71,7 +98,7 @@ aside {
         translate: 0px 56px;
     }
 }
-  
+
 @keyframes umbral {
     0% {
         stop-color: rgba(9, 166, 3, 0.18);
@@ -111,8 +138,5 @@ aside {
     animation: bounce2 4s ease-in-out infinite;
     translate: 0px 46px;
     animation-delay: 0.5s;
-}
+}  
 
-.contentHome {
-    height: calc(100vh - 130px) !important;
-}
