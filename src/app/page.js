@@ -50,7 +50,7 @@ export default function Home(){
                 link="/pdf/tabelaPrecos.pdf"
                 iconOption={<TbTableShare className="text-[var(--green)]" />}
                 title="Tabela de preços"
-                description="Consulte aqui a tebla oficial atualizada de preços."
+                description="Consulte aqui a tebela oficial atualizada de preços."
               />
               
               {/* -----Card 2----- */}
